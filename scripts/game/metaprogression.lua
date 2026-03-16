@@ -172,14 +172,4 @@ function MetaprogressionManager:save_progress()
     Files:write_config_file("progress.txt", self.data)
 end
 
-function MetaprogressionManager:apprend_table(table_name, value)
-    local tab = self:get(table_name)
-    if tab then
-        table.insert(tab, value)
-        self:save_progress()
-    else
-        print("WARNING: attempted to append to table '"..table_name.."' (not a table or inexistent)")
-    end
-end
-
 return MetaprogressionManager

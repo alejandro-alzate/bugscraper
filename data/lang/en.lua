@@ -332,6 +332,7 @@ return {
         game_over = {
             title = "GAME OVER!",
             kills = "Enemies killed", -- The amount of enemies the player has killed
+            deaths = "Deaths",
             time = "Time",            -- The time that the player took to complete the level
             floor = "Floor",          -- Which storey the player was on when they died
             score = "Score",
@@ -339,6 +340,13 @@ return {
 
             continue = "CONTINUE",
             quick_restart = "QUICK RESTART",
+        },
+        stats = {
+            title = "STATS",
+
+            time_total = "Time played (total)",
+            time_ingame = "Time played (in game)",
+            runs = "Runs",
         },
         new_reward = {
             new_skin = "New character!",

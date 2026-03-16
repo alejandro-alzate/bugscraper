@@ -230,6 +230,8 @@ local function generate_menus()
 
     menus.game_over = require "data.menus.menu_game_over"
 
+    menus.stats = require "data.menus.menu_stats"
+
     menus.credits = require "data.menus.menu_credits"
 
     menus.open_source = Menu:new(game, "{menu.open_source.title}", {

@@ -39,6 +39,7 @@ local ScreenshotManager      = require "scripts.screenshot"
 local QueuedPlayer           = require "scripts.game.queued_player"
 local GunDisplay             = require "scripts.actor.enemies.gun_display"
 local MetaprogressionManager = require "scripts.game.metaprogression"
+local StatsManager           = require "scripts.game.stats_manager"
 local BackroomTutorial       = require "scripts.level.backroom.backroom_tutorial"
 local MusicDisk              = require "scripts.audio.music_disk"
 local MusicDiskWeb           = require "scripts.audio.music_disk_web"
@@ -68,6 +69,7 @@ function Game:init()
 	Audio = AudioManager:new()
 	Screenshot = ScreenshotManager:new()
 	Metaprogression = MetaprogressionManager:new()
+	Stats = StatsManager:new()
 	Achievements = AchievementManager:new()
 
 	Input:init_users()
@@ -236,6 +238,7 @@ function Game:new_game(params)
 	self.kills = 0
 	self.time = 0
 	self.score = 0
+	self.deaths = 0
 
 	self.frames_to_skip = 0
 	self.slow_mo_rate = 0
@@ -855,6 +858,8 @@ function Game:on_remove(actor)
 end
 
 function Game:on_player_death(player)
+	self.deaths = self.deaths + 1
+
 	self:unregister_alive_player(player.n)
 	self.waves_until_respawn[player.n] = { player.waves_until_respawn, player }
 
@@ -895,6 +900,11 @@ function Game:save_stats()
 	self.stats.kills = self.kills
 	self.stats.max_combo = self.level.max_fury_combo
 	self.stats.score = self.score
+	self.stats.deaths = self.deaths
+
+	Stats:add("deaths", self.deaths)
+	Stats:add("kills", self.kills)	
+	Stats:set("max_combo", max(Stats:get("max_combo"), self.level.max_fury_combo))	
 end
 
 function Game:game_over()
@@ -1127,6 +1137,8 @@ function Game:start_game(is_quickstart)
 
 	self.menu_manager:set_can_pause(true)
 	self.camera:set_target_offset(0, 0)
+
+	Stats:add("runs", 1)
 end
 
 function Game:apply_upgrade(upgrade)

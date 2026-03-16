@@ -23,7 +23,8 @@ function Files:parse_value(str_value, reference_value)
     elseif typ == "table" then
         val = split_str(str_value or "", ",") 
         for index, subval in pairs(val) do
-            val[index] = self:parse_value(subval, (reference_value[index] or reference_value[1]) or "")
+            local ref_subvalue = (reference_value[index] or reference_value[1]) or "" 
+            val[index] = self:parse_value(subval, ref_subvalue)
         end
     end
 

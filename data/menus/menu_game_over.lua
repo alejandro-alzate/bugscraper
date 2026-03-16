@@ -15,7 +15,11 @@ local game_over_items       = {
     { "" },
     { StatsMenuItem, Text:parse("💀 {menu.game_over.kills}"), function(self)
         return
-            game.stats.kills
+        game.stats.kills
+    end },
+    { StatsMenuItem, Text:parse("💀 {menu.game_over.deaths}"), function(self)
+        return
+            game.stats.deaths
     end },
     { StatsMenuItem, Text:parse("🕐 {menu.game_over.time}"), function(self)
         return time_to_string(game.stats.time)

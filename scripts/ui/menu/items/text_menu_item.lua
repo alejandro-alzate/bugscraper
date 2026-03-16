@@ -31,6 +31,8 @@ function TextMenuItem:init(i, x, y, text, on_click, update_value)
 
 	self.annotation = nil
 
+	self.override_text_color = nil
+
 	-- if default_val ~= nil then
 	-- 	self:update_value(default_val)
 	-- end
@@ -69,7 +71,7 @@ function TextMenuItem:draw()
 	
 	if self.is_selected and self.label_text ~= "" then
 		local col, text_col = Input:get_last_ui_player_colors()
-		local x = math.floor(game.menu_manager:get_menu_padding())
+		local x = math.floor(game.menu_manager:get_menu_padding() + self.ox)
 		local y = math.floor(self.y + self.oy - 6)
 		local w = math.floor(CANVAS_WIDTH - game.menu_manager:get_menu_padding()*2)
 		local h = 16
@@ -137,13 +139,16 @@ function TextMenuItem:draw_text()
 	if not self.is_selectable then
 		text_color = COL_LIGHT_GRAY
 	end
+	if self.override_text_color then
+		text_color = self.override_text_color
+	end
 	love.graphics.setColor(text_color)
 
 	-- Draw text
 	if type(self.value) == "nil" then
-		print_centered(self.label_text, self.x + self.ox + self.text_ox, self.y + self.oy + self.text_oy)
+		print_centered(self.label_text, floor(self.x + self.ox + self.text_ox), self.y + self.oy + self.text_oy)
 	else
-		print_ycentered(self.label_text, game.menu_manager:get_menu_padding() + 16 + self.ox + self.text_ox, self.y + self.oy + self.text_oy)
+		print_ycentered(self.label_text, floor(game.menu_manager:get_menu_padding() + 16 + self.ox + self.text_ox), self.y + self.oy + self.text_oy)
 		self:draw_value_text()
 	end
 end
@@ -163,7 +168,17 @@ end
 function TextMenuItem:after_click()
 	Audio:play_var("ui_menu_select_{01-04}", 0.1, 1.2)
 	Input:vibrate(Input:get_last_ui_user_n(), 0.03, 0.1)
+	
 	self.oy = -self.selected_anim_offset
+end
+
+function TextMenuItem:on_set(is_back)
+	TextMenuItem.super.on_set(self)
+
+	self.oy = 0
+	if is_back then
+		self.ox = -self.ox
+	end
 end
 
 return TextMenuItem

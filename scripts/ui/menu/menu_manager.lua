@@ -138,7 +138,7 @@ function MenuManager:set_menu(menu, params)
 
 	-- Update selection to first selectable
 	if not params.skip_on_set_call then
-		self.cur_menu:on_set()
+		self.cur_menu:on_set(params.is_back)
 	end
 	self.cur_menu:update(0)
 	

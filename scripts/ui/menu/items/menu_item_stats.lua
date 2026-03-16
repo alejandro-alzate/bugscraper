@@ -6,6 +6,8 @@ function StatsMenuItem:init(i, x, y, text, get_value)
 	StatsMenuItem.super.init(self, i, x, y, text)
 	self.get_value = get_value
 	self.value = nil
+
+	self.override_text_color = COL_WHITE
 end
 
 function StatsMenuItem:update(dt)

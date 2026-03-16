@@ -46,10 +46,10 @@ end
 
 function ProgressBarMenuItem:draw()
 	local w = self.w
-	local x = self.x - w/2
-	local y = self.y - 8 + 3
+	local x = self.x - w/2 + self.ox
+	local y = self.y - 8 + 3 + self.oy
 
-	local val =      (clamp(self.value,         self.min_value, self.max_value) - self.min_value) / (self.max_value - self.min_value)
+	local val = (clamp(self.value, self.min_value, self.max_value) - self.min_value) / (self.max_value - self.min_value)
 	local over_val
 	if self.overlay_value then
 		over_val = (clamp(self.overlay_value, self.min_value, self.max_value) - self.min_value) / (self.max_value - self.min_value)
@@ -60,7 +60,7 @@ function ProgressBarMenuItem:draw()
 	if self.overlay_value then
 		draw_3_slice(images.selection_left_small, nil, images.selection_right_small, COL_LIGHTEST_GRAY, x, y, w * over_val, 10)
 	end
-	print_centered_outline(COL_WHITE, COL_MID_GRAY, self.text, self.x, y + 4)
+	print_centered_outline(COL_WHITE, COL_MID_GRAY, self.text, floor(self.x + self.ox), y + 4)
 end
 
 function ProgressBarMenuItem:after_click()	

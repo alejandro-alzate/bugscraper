@@ -87,9 +87,12 @@ function Menu:draw()
 	if self.extra_draw then self.extra_draw() end
 end
 
-function Menu:on_set()
+function Menu:on_set(is_back)
 	for i, item in pairs(self.items) do
-		item:on_set()
+		item:on_set(is_back)
+		if item.ox then
+			item.ox = 20 * (is_back and -1 or 1)
+		end
 		item.is_selected = false
 	end
 end
