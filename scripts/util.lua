@@ -250,6 +250,20 @@ function shuffle_table(t, min, max, rng)
 	end
 end
 
+function remove_table_duplicates(tab)
+    local hash = {}
+    local result = {}
+
+    for _, value in ipairs(tab) do
+        if not hash[value] then
+            table.insert(result, value)
+            hash[value] = true
+        end
+    end
+
+    return result
+end
+
 function is_between(v, a, b)
 	return a <= v and v <= b
 end

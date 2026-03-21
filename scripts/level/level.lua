@@ -130,6 +130,8 @@ function Level:init(game, backroom)
 	self.max_fury_combo = 0
 	self.fury_combo = 0
 	self.has_energy_drink = false
+
+	self.last_damage_wave = 0
 end
 
 function Level:ready()
@@ -156,6 +158,8 @@ function Level:update(dt)
 	if self.backroom then
 		self.backroom:update(dt)
 	end
+
+	self:update_stats_achievements(dt)
 
 	self.flash_alpha = max(self.flash_alpha - dt, 0)
 	
@@ -834,6 +838,8 @@ function Level:on_player_damage(player, amount, source)
 	if player then
 		self:add_fury(-amount * self.fury_damage_malus)
 	end
+
+	self.last_damage_wave = self.floor
 end
 
 function Level:on_enemy_damage(enemy, amount, source)
@@ -890,6 +896,21 @@ function Level:add_fury_max(val)
 end
 function Level:multiply_fury_speed(val)
 	self.fury_speed = self.fury_speed * val
+end
+
+------------------------------------------------------
+
+function Level:update_stats_achievements(dt)
+	Stats:set("max_combo", max(Stats:get("max_combo"), self.max_fury_combo), true)	
+	Stats:set("max_combo", max(Stats:get("max_combo"), self.fury_combo), true)	
+
+	Stats:set("best_run", max(Stats:get("best_run"), self.floor), true)
+		
+	if self.floor - self.last_damage_wave >= 20 then
+		Achievements:grant("ach_no_damage_easy")
+	end 
+
+	Stats:check_achievements()
 end
 
 return Level
