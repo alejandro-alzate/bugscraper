@@ -73,9 +73,6 @@ function StatsManager:check_achievements()
     if self:get("best_run") >= 80 then
 		Achievements:grant("ach_complete_w4")
 	end
-    if self:get("best_run") >= 100 then
-		Achievements:grant("ach_complete_end")
-	end
     
     if self:get("max_combo") >= 100 then
 		Achievements:grant("ach_big_combo")

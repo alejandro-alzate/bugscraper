@@ -4,7 +4,7 @@ local Class = require "scripts.meta.class"
 local LuaSteam
 local import_success
 if pcall(function()
-	LuaSteam = require "luassteam"
+	LuaSteam = require "luasteam"
 end) then
 	print("Steamworks: successfully loaded")
 	import_success = true
