@@ -45,6 +45,9 @@ return Cutscene:new("ceo_escape_w5", {
                 if player.gun.name == "resignation_letter" then
                     data.resigning_player = player
                 end
+                
+                player:set_input_mode(PLAYER_INPUT_MODE_CODE)
+                player:reset_virtual_controller()
             end
             assert(data.resigning_player ~= nil)
 
