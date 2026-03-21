@@ -347,7 +347,7 @@ return {
             time_total = "Time played (total)",
             time_ingame = "Time played (in game)",
             runs = "Runs",
-            best_run = "Best floor reached", -- The biggest floor reached on any run
+            best_run = "Best wave reached", -- The biggest wave number reached on any run
         },
         new_reward = {
             new_skin = "New character!",
@@ -415,8 +415,12 @@ return {
             description = "Die 50 times",
         },
         ach_all_upgrades = {
-            name = "A furious cocktail",
+            name = "A Furious Cocktail",
             description = "Unlock all upgrades",
+        },
+        ach_all_skins = {
+            name = "Team Leader",
+            description = "Unlock all characters",
         },
         ach_no_damage_easy = {
             name = "Iron Bug",

@@ -41,6 +41,11 @@ return {
         steam_id = "ACH_ALL_UPGRADES",
     },
     {
+        name = "ach_all_skins",
+        image = "ach_all_skins",
+        steam_id = "ACH_ALL_SKINS",
+    },
+    {
         name = "ach_no_damage_easy",
         image = "ach_no_damage_easy",
         steam_id = "ACH_NO_DAMAGE_EASY",
