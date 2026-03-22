@@ -26,7 +26,7 @@ return {
         ja = "日本語",
     },
     game = {
-        demo = "デモ版", -- Chip added to the game logo to indicate that this version is a demo
+        demo = "体験版", -- Chip added to the game logo to indicate that this version is a demo
         fps = "%d FPS",
         congratulations = "CONGRATULATIONS!",
         win_thanks = "デモで遊んでくれてありがとう",

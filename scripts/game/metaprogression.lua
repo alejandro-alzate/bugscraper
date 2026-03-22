@@ -2,7 +2,6 @@ require "scripts.util"
 local Class = require "scripts.meta.class"
 local upgrades = require "data.upgrades"
 local skins = require "data.skins"
-local skin_name_to_id = require "data.skin_name_to_id"
 
 local MetaprogressionManager = Class:inherit()
 
@@ -40,23 +39,13 @@ function MetaprogressionManager:init()
         has_seen_w5_transition_cutscene = false,
     }
 
-    local t = skin_name_to_id
-    self.levels = {
-        { threshold = 5000, rewards = { { type = "upgrade", upgrade = "UpgradeEnergyDrink" } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.nel } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.rico } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.nob } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.amb } } },
-        { threshold = 5000, rewards = { { type = "upgrade", upgrade = "UpgradePomegranateJuice" } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.dodu } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.leo } } },
-        { threshold = 5000, rewards = { { type = "skin", skin = t.yv } } },
-    }
+    self.levels = require "data.metaprogression_levels"
 
     self.data = {}
     self:read_progress()
     self:remove_duplicates({"skins", "upgrades", "achievements"})
 
+    -- Count the number of skins / upgrades
     self.max_upgrades = #self.default_data["upgrades"]
     self.max_skins = #self.default_data["skins"]
     for _, level in pairs(self.levels) do
@@ -68,8 +57,6 @@ function MetaprogressionManager:init()
             end
         end
     end
-    print_debug("self.max_upgrades", self.max_upgrades)
-    print_debug("self.max_skins", self.max_skins)
 
     self.old_xp = self:get_xp()
     self.old_total_xp = self:get_total_xp()
