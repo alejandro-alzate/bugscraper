@@ -275,7 +275,7 @@ return Cutscene:new("ceo_escape_w5", {
                 images.star_big, 
                 (data.resigning_player.mid_x + data.ceo.mid_x)/2, 
                 data.resigning_player.mid_y, 
-                0, 1.0, 0.8, {
+                0, 0.3, 0.8, {
                 color = COL_WHITE
             })
             Particles:pop_layer()

@@ -311,9 +311,6 @@ local function generate_menus()
         table.remove(items, 5) -- Remove whishlist if not demo
     end
 
-    menus.win = Menu:new(game, "{game.congratulations}", items, { 0, 0, 0, 0.85 }, PROMPTS_GAME_OVER, nil,
-        { is_backable = false })
-
     ------------------------------------------------------------
 
     menus.joystick_removed = Menu:new(game, "{menu.joystick_removed.title}", {

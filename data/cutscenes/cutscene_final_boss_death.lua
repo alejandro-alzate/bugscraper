@@ -53,6 +53,7 @@ return Cutscene:new("final_boss_death", {
             data.bg = BackgroundFinalBossDeath:new()
             data.bg.offset_y = 100
             game.level:set_background(data.bg)
+            game.level.background_speed_lines = false
         end,
     }),
 
