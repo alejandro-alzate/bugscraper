@@ -8,17 +8,17 @@ local function color(hex)
 	assert(type(hex) == "number", "incorrect type for 'hex' ("..type(hex).."), argument given should be number")
 
 	local r = math.floor(hex / 65536) % 256
-	local g = math.floor(hex / 256) % 256 
+	local g = math.floor(hex / 256) % 256
 	local b = hex % 256
 	return {r/255, g/255, b/255, 1.0}
 end
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Saves
 STATS_AUTOSAVE_INTERVAL = 15
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Graphics
 CANVAS_WIDTH = 480
@@ -66,11 +66,11 @@ SPRITE_ANCHOR_RIGHT_BOTTOM = "ee"
 
 PARTICLE_LAYER_CAFETERIA_BACKGROUND = 1
 PARTICLE_LAYER_BACKGROUND = 2
-PARTICLE_LAYER_BACK = 3 
-PARTICLE_LAYER_BACK_SHADOWLESS = 4 
-PARTICLE_LAYER_NORMAL = 5 
-PARTICLE_LAYER_SHADOWLESS = 6 
-PARTICLE_LAYER_HUD = 7 
+PARTICLE_LAYER_BACK = 3
+PARTICLE_LAYER_BACK_SHADOWLESS = 4
+PARTICLE_LAYER_NORMAL = 5
+PARTICLE_LAYER_SHADOWLESS = 6
+PARTICLE_LAYER_HUD = 7
 PARTICLE_LAYER_FRONT = 8
 
 PARTICLE_LAYER_COUNT = 8 -- CHANGE THIS AFTER ADDING A PARTICLE LAYER
@@ -80,7 +80,7 @@ ENEMY_FLIP_MODE_MANUAL = "manual" -- only manual flipping
 ENEMY_FLIP_MODE_XVELOCITY = "xvelocity" -- flipping based on x velocity
 ENEMY_FLIP_MODE_TARGET = "target" -- flipping based on location of the target
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Physics & map
 BLOCK_WIDTH = 16
@@ -119,20 +119,20 @@ RECT_GROUND_FLOOR_PARAMS = {2, 3, 111, 16}
 RECT_TUTORIAL_PARAMS = {2, 0, 96, 16}
 RECT_CREDITS_PARAMS = {3, -2, 31, 16}
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Enemies
 TIMED_SPIKES_TIMING_MODE_TEMPORAL = "temporal" -- Spikes timing depend on time
 TIMED_SPIKES_TIMING_MODE_MANUAL = "manual" -- Spikes timing are manual
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Font
-FONT_CHARACTERS = 
+FONT_CHARACTERS =
     " !\"#$%&'()*+,-·./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz"..
     "{|}~ ¡¢£©®°¿ÀÁÂÃÄÅĄÆÇĆÈÉÊËĘÌÍÎÏŁÐÑŃÒÓÔÕÖØÙÚÛÜŚÝŹŻŒÞßàáâãäåąæçćèéêëęìíîïłðñńòóôõöøùúûüśýźżœþÿŸЁАБВГДЕЖЗИЙКЛМНО"..
     "ПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё€"
-FONT_SYMBOLS_CHARACTERS = 
+FONT_SYMBOLS_CHARACTERS =
     "🔊🔉🔈🎵🎼🔳🔲📺🕐↖🛜▶⏸✓🔄🔘⬅➡⬆⬇⏏🔫🔚📥👆🔙🗄⌨🎮🎚❤"..
     "✅❎🔗💡⚠🕹🫨💧🐜🐛🐝🪲🈶🌄🛅😎😈🐦𝕏🦋🐰🐞🌐⏭🥚🥦🐧🎓🔺🦂💀⏰🔥⭐🍊🏆⎘⚔️"
 FONT_7SEG_CHARACTERS = " 0123456789-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -141,7 +141,7 @@ FONT_FAT_CHARACTERS = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234
 FONT_ZH_CHARACTERS = require "fonts.font_zh_characters"
 FONT_JA_CHARACTERS = require "fonts.font_ja_characters"
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Colors
 COL_WHITE = {1, 1, 1, 1}
@@ -232,7 +232,7 @@ MAX_DISPLAY_FLOOR = 80 -- Maximum floor of the bugscraper (and not the maximum n
 -- Input
 MAX_ASSIGNABLE_BUTTONS = 8
 
-PLAYER_INPUT_MODE_USER = "user" -- The player is controlled by the user (with a keyboard, controller, etc) 
+PLAYER_INPUT_MODE_USER = "user" -- The player is controlled by the user (with a keyboard, controller, etc)
 PLAYER_INPUT_MODE_CODE = "code" -- The player is controlled via code (for example, for cutscenes)
 
 INPUT_TYPE_KEYBOARD = "k"
@@ -253,7 +253,7 @@ BUTTON_STYLES = {
 CONTROLLER_BRANDS = {
     BUTTON_STYLE_SWITCH,
     BUTTON_STYLE_PLAYSTATION4,
-    BUTTON_STYLE_PLAYSTATION5, 
+    BUTTON_STYLE_PLAYSTATION5,
     BUTTON_STYLE_XBOX,
 }
 
@@ -268,7 +268,7 @@ RAW_INPUT_MAP_DEFAULT_EMPTY = {
     jump =      {},
     shoot =     {},
     interact =  {},
-    
+
     pause =     {},
     ui_select = {},
     ui_back =   {},
@@ -290,7 +290,7 @@ RAW_INPUT_MAP_DEFAULT_GLOBAL = {
     jump =      {},
     shoot =     {},
     interact =  {},
-    
+
     pause =     {"k_escape", "k_p"},
     ui_select = {"k_c", "k_z", "k_j", "k_l", "k_return"},
     ui_back =   {"k_x", "k_k", "k_escape", "k_backspace"},
@@ -312,7 +312,7 @@ RAW_INPUT_MAP_DEFAULT_CONTROLLER = {
     jump =      {"c_a", "c_triggerleft", "c_leftshoulder"},
     shoot =     {"c_x", "c_triggerright", "c_rightshoulder"},
     interact =  {"c_y"},
-    
+
     pause =     {"c_start"},
     ui_select = {"c_a", "c_y"},
     ui_back =   {"c_b"},
@@ -334,7 +334,7 @@ RAW_INPUT_MAP_DEFAULT_KEYBOARD_SOLO = {
     jump =      {"k_c", "k_j"},
     shoot =     {"k_x", "k_k"},
     interact =  {"k_z", "k_l"},
-    
+
     pause =     {"k_escape", "k_p"},
     ui_select = {"k_c", "k_z", "k_j", "k_l", "k_return"},
     ui_back =   {"k_x", "k_k", "k_escape", "k_backspace"},
@@ -356,8 +356,8 @@ RAW_INPUT_MAP_DEFAULT_SPLIT_KEYBOARD_P1 = {
     jump =      {"k_f"},
     shoot =     {"k_g"},
     interact =  {"k_h"},
-    
-    pause =     {"k_escape", "k_p"},    
+
+    pause =     {"k_escape", "k_p"},
     ui_select = {"k_f", "k_h"},
     ui_back =   {"k_g", "k_escape"},
     ui_left =   {"k_a"},
@@ -378,7 +378,7 @@ RAW_INPUT_MAP_DEFAULT_SPLIT_KEYBOARD_P2 = {
     jump =      {"k_l"},
     shoot =     {"k_k"},
     interact =  {"k_j"},
-    
+
     pause =     {"k_escape", "k_p"},
     ui_select = {"k_l", "k_j", "k_return"},
     ui_back =   {"k_k", "k_backspace"},
@@ -579,19 +579,19 @@ CONTROLLER_BUTTONS = {
     ["triggerright"] = true,
 }
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Music
 MUSIC_MODE_OFF = "off"
 MUSIC_MODE_INGAME = "ingame"
 MUSIC_MODE_PAUSE = "pause"
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Audio
-AUDIO_3D_RANGE = 0.2 
+AUDIO_3D_RANGE = 0.2
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Upgrade
 UPGRADE_TYPE_TEMPORARY = "temporary"
@@ -601,7 +601,7 @@ UPGRADE_TYPE_PERMANENT = "permanent"
 UPGRADE_TARGET_SINGLE = "single"
 UPGRADE_TARGET_ALL = "all"
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Wave
 FLOOR_TYPE_NORMAL = "normal"
@@ -610,10 +610,10 @@ FLOOR_TYPE_CAFETERIA = "cafeteria"
 WAVE_ROLL_TYPE_RANDOM = "random"
 WAVE_ROLL_TYPE_FIXED = "fixed"
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Misc
-LIGHNING_COORDINATE_MODE_CARTESIAN = "cartesian" -- x, y 
+LIGHNING_COORDINATE_MODE_CARTESIAN = "cartesian" -- x, y
 LIGHNING_COORDINATE_MODE_POLAR = "polar" -- radius, angle
 
 TV_WIDTH = 55
@@ -642,12 +642,12 @@ TV_CREDITS = {
     ["slide_020"] = "kiwisky",
     ["slide_021"] = "LinkyLorelei",
     ["slide_022"] = "8lueskii",
-    
+
     ["bluescreen_1"] = "Hector SK (Nextop Games)",
     ["bluescreen_2"] = "418cat",
 }
 
---------------------------------------------- 
+---------------------------------------------
 
 -- Super secret easter egg stuff :)
 SMASH_EASTER_EGG_PROBABILITY = 0.05
