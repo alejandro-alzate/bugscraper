@@ -342,7 +342,7 @@ return {
             quick_restart = "REINICIO RÁPIDO",
         },
         stats = {
-            title = "Estadísticas",
+            title = "ESTADÍSTICAS",
 
             time_total = "Tiempo jugado (total)",
             time_ingame = "Tiempo jugado (en juego)",
@@ -392,19 +392,19 @@ return {
     achievements = {
         ach_complete_w1 = {
             name = "Recursos de Depuracionces",
-            description = "Completa el Departmento 1']]",
+            description = "Completa el Departmento 1",
         },
         ach_complete_w2 = {
             name = "Fábrica",
-            description = "Completa el Departmento 2']]",
+            description = "Completa el Departmento 2",
         },
         ach_complete_w3 = {
             name = "Servidores",
-            description = "Completa el Departmento 3']]",
+            description = "Completa el Departmento 3",
         },
         ach_complete_w4 = {
             name = "Jardines",
-            description = "Completa el Departmento 4']]",
+            description = "Completa el Departmento 4",
         },
         ach_complete_end = {
             name = "Vacaciones",
