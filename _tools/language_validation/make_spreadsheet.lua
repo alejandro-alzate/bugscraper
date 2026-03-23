@@ -28,7 +28,7 @@ local header = require("_tools.language_validation.header")
 -- Target files
 local lang_path = "data.lang"
 local main_lang = "en"
-local lang_list = { "es", "fr", "pl", "pt", "zh" }
+local lang_list = { "es", "fr", "pl", "pt_BR", "zh_Hans" }
 
 -- Require lists
 local req_main_lang = require(string.format("%s.%s", lang_path, main_lang))
