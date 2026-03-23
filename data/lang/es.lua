@@ -2,7 +2,7 @@
     TO TRANSLATORS:
     * Reference document for all enemies, players, levels, etc: (can be outdated)
       https://docs.google.com/document/d/13UntpWqoTXgYnBm5HL0pZmjBDwMStIN8YB1IPdi7hlA
-    * To search for added or changed strings, you can use this regex in the search functionality 
+    * To search for added or changed strings, you can use this regex in the search functionality
       of your text editor: (Ctrl+F then Alt+R on VS Code)
       \[\[((ADDED)|(REMOVED))
     * It is very easy for me to add more glyphs if needed, just tell me and I'll do it.
@@ -22,8 +22,8 @@ return {
         fr = "Français",
         zh = "简体中文",
         pl = "Polski",
-        pt_BR = "[[ADDED / 'Português Brasileiro']]",
-        ja = "[[ADDED / '日本語']]",
+        pt_BR = "Português Brasileiro",
+        ja = "日本語",
     },
     game = {
         demo = "DEMO", -- Chip added to the game logo to indicate that this version is a demo
@@ -33,7 +33,7 @@ return {
         win_wishlist = "Agregalo a tu lista de deseados en Steam :)", -- "Wishlist" is a verb
         warning_web_controller = "Algunos navegadores no tienen el soporte de mandos necesario",
 
-        combo = "%d COMBO", 
+        combo = "%d COMBO",
     },
     level = {
         world_prefix = "Departmento %s",
@@ -41,17 +41,17 @@ return {
         -- Department names
         -- I chose to not use articles in english (so instead of "The Factory", it's just "Factory")
 
-        -- Dept 1: This can be any vaguely office-y name (I just chose this in english because of the word play), 
+        -- Dept 1: This can be any vaguely office-y name (I just chose this in english because of the word play),
         -- because this department just represents a generic office department.
-        world_1 = "Recursos de Depuracionces", 
+        world_1 = "Recursos de Depuracionces",
         -- Dept 2: This department is a factory themed after bees, with grungy metallic environment
         world_2 = "Fábrica",
-        -- Dept 3: This is a moody, dark and mysterious room filled with endless racks of servers 
+        -- Dept 3: This is a moody, dark and mysterious room filled with endless racks of servers
         world_3 = "Servidores",
         -- Dept 4: This is the highest department of the bugscraper, filled with lofty gardens and clean, white, modern architecture
         world_4 = "Jardines",
 
-        -- Dept 0: This is an underground secret department below the bugscraper. It contains a huge hangar with a large rocket. 
+        -- Dept 0: This is an underground secret department below the bugscraper. It contains a huge hangar with a large rocket.
         world_0 = "Sótano",
     },
     gun = {
@@ -85,7 +85,7 @@ return {
             rico = "Rico", -- From 'The Bullet Hopper'
             yv = "Y.V.", -- From 'Nuclear Throne' / See localized names here: https://docs.google.com/spreadsheets/d/18N1CNxIzSUm4CkIWUw0nbRnlxzAgoRbHpGyX8649Gjw/edit?usp=sharing
             leo = "Leo",
-            dodu = "Dodu", 
+            dodu = "Dodu",
         },
         abbreviation = "J%d", -- Short appreviation to denote players by their number. Example: in english, "P1" means "Player 1", in french "J1" means "Joueur 1".
     },
@@ -93,21 +93,21 @@ return {
         -- These are the boss names. Please look at the Gdocs for reference.
         -- Feel free to pick interesting names, and you don't have to base them off the english name.
 
-        -- (for example, the french name for "Mr. Dung" is "J. De Bouse", which is a 
-        -- play on words with the french word for 'dung' and a famous french humorist. 
+        -- (for example, the french name for "Mr. Dung" is "J. De Bouse", which is a
+        -- play on words with the french word for 'dung' and a famous french humorist.
         -- "The Webmaster" is a play on words between the theme of the area and spider webs)
 
-        -- A somewhat witty and clownesque exectutive based off a Dung Beetle. 
+        -- A somewhat witty and clownesque exectutive based off a Dung Beetle.
         boss_1 = "Sr. Estiércol",
 
-        -- The queen of the Factory, who's also a metal/rock singer.  
-        boss_2 = "Su majestad", 
+        -- The queen of the Factory, who's also a metal/rock singer.
+        boss_2 = "Su majestad",
 
         -- The guardian of the Server Room, whose design is based off a motherboard and spiders.
         boss_3 = "El maestro de redes",
 
-        -- A very large green cabbage-like, boulder-like, rolling enemy from the Garden area.   
-        -- You're free to be more creative with this one. 
+        -- A very large green cabbage-like, boulder-like, rolling enemy from the Garden area.
+        -- You're free to be more creative with this one.
         -- (example: in French, I chose "Grobroco", "gros" (large) + "broco" (diminutive of broccoli))
         boss_4 = "Coloso Rodadoso",
 
@@ -167,11 +167,11 @@ return {
     },
     input = {
         prompts = {
-            -- All of these are infinitive verbs and may be shown as button prompts 
+            -- All of these are infinitive verbs and may be shown as button prompts
             -- (i.e., "[X] Shoot", "[C] Jump", etc)
 
             -- Gameplay Actions
-            move = "Mover", 
+            move = "Mover",
             left = "Izquierda",
             right = "Derecha",
             up = "Arriba",
@@ -192,10 +192,10 @@ return {
             ui_back = "Atrás",
             pause = "Pausar",
             join = "Unirse", -- As, in joining the game, adding a new player to the game.
-            -- As in, "Press [key] to split the keyboard". 
-            -- Shown on the title screen when one keyboard player has joined. 
+            -- As in, "Press [key] to split the keyboard".
+            -- Shown on the title screen when one keyboard player has joined.
             -- Try to keep it as short as possible since space is limited there.
-            split_keyboard = "Compartir teclado", 
+            split_keyboard = "Compartir teclado",
 
             wall_jump = "Salto de pared",
             jetpack = "Jetpack", -- Refers to "jetpacking", a move in the game performed by shooting downwards with a gun.
@@ -217,10 +217,10 @@ return {
             resume = "CONTINUAR",
             retry = "REINTENTAR",
 
-            -- This correspons to floor 0 in the game. To different cultures, the "ground floor" 
-            -- might usually mean "floor 1", so please make sure to avoid ambiguity when translating. 
-            -- (You can also translate as "main lobby" or something like it.)   
-            return_to_ground_floor = "VOLVER AL PRIMER PISO", 
+            -- This correspons to floor 0 in the game. To different cultures, the "ground floor"
+            -- might usually mean "floor 1", so please make sure to avoid ambiguity when translating.
+            -- (You can also translate as "main lobby" or something like it.)
+            return_to_ground_floor = "VOLVER AL PRIMER PISO",
             options = "OPCIONES",
             credits = "CREDITOS",
             feedback = "COMENTARIOS",
@@ -259,19 +259,19 @@ return {
                 note_global_keyboard = "Estas configuraciones son las mismas para todos los jugadores de teclado",
                 note_global_controller = "Estas configuraciones son las mismas para todos los controladores",
                 -- Shown when navigating to player "%d"'s controller settings while no player of this number has joined yet.
-                subtitle_no_player = "[⚠ NO HAY JUGADOR %d]", 
+                subtitle_no_player = "[⚠ NO HAY JUGADOR %d]",
                 -- Shown in the controller settings while no controller is connected
-                subtitle_no_controller = "[⚠ NO HAY MANDO CONECTADO]", 
+                subtitle_no_controller = "[⚠ NO HAY MANDO CONECTADO]",
                 no_buttons = "[NO HAY BOTÓN]",
                 press_button = "[PRESIONE BOTÓN]", -- Try to keep it as short as possible
                 -- When assigning buttons, if the user presses a button that is already bound, it will instead
                 -- remove that button.
-                press_again_to_remove = "Presione una tecla ya vinculada para removerla", 
-                
+                press_again_to_remove = "Presione una tecla ya vinculada para removerla",
+
                 keyboard = "Teclado",
                 keyboard_solo = "TECLADO (Por defecto)",
                 -- "Split" as in, "the 1st split keyboard user"
-                keyboard_p1 = "TECLADO (Mitad 1)", 
+                keyboard_p1 = "TECLADO (Mitad 1)",
                 keyboard_p2 = "TECLADO (Mitad 2)",
 
                 controller = "MANDO",
@@ -299,7 +299,7 @@ return {
                 },
                 vsync = "VSYNC",
                 menu_blur = "DIFUMINAR FONDO DEL MENU", -- Whether to apply the blurring effect in menu backgrounds
-                background_speed = "VELOCIDAD DEL FONDO", -- How quickly the background scrolls 
+                background_speed = "VELOCIDAD DEL FONDO", -- How quickly the background scrolls
                 bullet_lightness = "BRILLO DE BALAS", -- How brightly bullets are rendered
             },
             game = {
@@ -310,7 +310,7 @@ return {
                 mouse_visible = "MOSTRAR PUNTERO DEL RATÓN",
                 pause_on_unfocus = "PAUSAR AL PERDER EL FOCO", -- whether the game should pause when the window loses focus
                 screenshake = "SACUDIDO DE PATALLA",
-                skip_boss_intros = "OMITIR INTRODUCCIÓN DE JEFES", -- Whether the game should skip the boss intro animations 
+                skip_boss_intros = "OMITIR INTRODUCCIÓN DE JEFES", -- Whether the game should skip the boss intro animations
                 show_fps_warning = "AVISAR DE BAJO RENDIMIENTO", -- Whether the game should show a warning when its framerate is low
 
             },
@@ -322,7 +322,7 @@ return {
             },
         },
         achievements = {
-            title = "[[ADDED / 'ACHIEVEMENTS']]",
+            title = "LOGROS",
         },
         feedback = {
             title = "COMENTARIOS",
@@ -332,7 +332,7 @@ return {
         game_over = {
             title = "JUEGO TERMINADO!",
             kills = "Enemigos matados", -- The amount of enemies the player has killed
-            deaths = "[[ADDED / 'Deaths']]",
+            deaths = "Muertes",
             time = "Tiempo transcurrido",            -- The time that the player took to complete the level
             floor = "Piso",          -- Which storey the player was on when they died
             score = "Puntaje",
@@ -342,12 +342,12 @@ return {
             quick_restart = "REINICIO RÁPIDO",
         },
         stats = {
-            title = "[[ADDED / 'STATS']]",
+            title = "Estadísticas",
 
-            time_total = "[[ADDED / 'Time played (total)']]",
-            time_ingame = "[[ADDED / 'Time played (in game)']]",
-            runs = "[[ADDED / 'Runs']]",
-            best_run = "[[ADDED / 'Best wave reached']]", -- The biggest wave number reached on any run
+            time_total = "Tiempo jugado (total)",
+            time_ingame = "Tiempo jugado (en juego)",
+            runs = "Rondas",
+            best_run = "Oleada mas alta", -- The biggest wave number reached on any run
         },
         new_reward = {
             new_skin = "Nuevo Carácter!",
@@ -367,7 +367,7 @@ return {
         credits = {
             title = "CREDITOS",
             ninesliced_presents = "Ninesliced presenta",
-            game_by = "Un juego por", 
+            game_by = "Un juego por",
             leo_bernard = "Léo Bernard", -- Please do not touch this
             music = "Musica",
             sound_design = "Diseño auditivo",
@@ -377,7 +377,7 @@ return {
             special_thanks = "Agradecimentos especiales",
             trailer = "Tráiler",
             asset_creators = "Creadores de recursos",
-            tv_slideshow = "Contribuciones de la presentación en la TV", -- Refers to the powerpoint TV slideshow on the title screen, which was contributed by a variety of people 
+            tv_slideshow = "Contribuciones de la presentación en la TV", -- Refers to the powerpoint TV slideshow on the title screen, which was contributed by a variety of people
             licenses = "Recursos y Lisencias de librerías",
             more = "Y muchos mas...",                        -- For the people that I might have forgotten in the special thanks section
             thank_you_for_playing = "¡Gracias por jugar!", -- Shown at the end of the credits
@@ -391,60 +391,60 @@ return {
     },
     achievements = {
         ach_complete_w1 = {
-            name = "Recursos de Depuracionces", 
-            description = "[[ADDED / 'Complete department 1']]",
+            name = "Recursos de Depuracionces",
+            description = "Completa el Departmento 1']]",
         },
         ach_complete_w2 = {
             name = "Fábrica",
-            description = "[[ADDED / 'Complete department 2']]",
+            description = "Completa el Departmento 2']]",
         },
         ach_complete_w3 = {
             name = "Servidores",
-            description = "[[ADDED / 'Complete department 3']]",
+            description = "Completa el Departmento 3']]",
         },
         ach_complete_w4 = {
             name = "Jardines",
-            description = "[[ADDED / 'Complete department 4']]",
+            description = "Completa el Departmento 4']]",
         },
         ach_complete_end = {
-            name = "[[ADDED / 'Vacations']]",
-            description = "[[ADDED / 'Complete the game']]",
+            name = "Vacaciones",
+            description = "Completa el juego",
         },
         ach_death = {
-            name = "[[ADDED / 'Perseverance']]",
-            description = "[[ADDED / 'Die 50 times']]",
+            name = "Perseverancia",
+            description = "Muere 50 veces",
         },
         ach_all_upgrades = {
-            name = "[[ADDED / 'A Furious Cocktail']]",
-            description = "[[ADDED / 'Unlock all upgrades']]",
+            name = "Coctél furioso",
+            description = "Desbloquea todos las mejoras",
         },
         ach_all_skins = {
-            name = "[[ADDED / 'Team Leader']]",
-            description = "[[ADDED / 'Unlock all characters']]",
+            name = "Líder del equipo",
+            description = "Desbloquea todos los personajes",
         },
         ach_max_hearts = {
-            name = "[[ADDED / 'Lover']]",
-            description = "[[ADDED / 'Obtain 7 ❤']]",
+            name = "Amante",
+            description = "Obtén 7 ❤",
         },
         ach_no_damage_easy = {
-            name = "[[ADDED / 'Iron Bug']]",
-            description = "[[ADDED / 'Do not take damage for 20 floors']]",
+            name = "Bicho de acero",
+            description = "No te dejes lastimar por 20 pisos",
         },
         ach_no_damage_full = {
-            name = "[[ADDED / 'Golden Bug']]",
-            description = "[[ADDED / 'Do not take damage for a full game']]",
+            name = "Bicho de oro",
+            description = "No te dejes lastimar por un juego completo",
         },
         ach_no_floor = {
-            name = "[[ADDED / 'The Floor Is Lava']]",
-            description = "[[ADDED / 'Do not touch the ground for 10 floors']]",
+            name = "El piso es lava",
+            description = "No toques el piso por 10 pisos",
         },
         ach_big_combo = {
-            name = "[[ADDED / 'Furious']]",
-            description = "[[ADDED / 'Get a 100 combo']]",
+            name = "Furioso",
+            description = "Obtén un combo de 100",
         },
         ach_smash_easter_egg = {
-            name = "[[ADDED / 'GAME!']]", -- This is a reference to what the announcer says at the end of a match in Smash Bros.
-            description = "[[ADDED / 'Obtain the secret exit animation']]", 
+            name = "SE ACABO!", -- This is a reference to what the announcer says at the end of a match in Smash Bros.
+            description = "Obtén la animación secreta de salida",
         },
     },
     discord = { -- Text used for Discord rich presence
